@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assests\swords.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLADE FIGHTERS</title>
+    <style>
+        *{
+            box-sizing: border-box ;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--- red container div -->
+
+    <div  
+        style="position: relative ;  display: inline-block; ">
+
+        <!--- smaller red container div -->
+
+        <div  
+            style="position: absolute;  display: flex ; width: 100% ; align-items: center ; padding: 20px ;    margin-top: 10px;
+            margin-left: 100px; " >
+
+            <!--- player health -->
+            <div class="move" style="position: relative;  width :1800px;display: flex; justify-content: flex-end; border-top: 4px solid white ;border-left: 4px solid white ;border-bottom: 4px solid white ;" >
+                <div  style="background-color: red; height:30px; width :100% "></div>
+                <div id="playerhealth" style="position:absolute ; background:#818cf8 ; top: 0 ; right: 0 ; bottom: 0 ; width: 100% ;  " ></div>
+                </div>
+
+            <!--- timer -->
+
+            <div class="move2"
+                id="timer"
+                style="background-color: black ; height: 50px ; width :100px; flex-shrink: 0;display: flex; align-items: center; justify-content: center ;color: white; border: 4px solid white ;">10</div>
+
+            <!--- enemy health -->
+
+            <div class="move3" style="position: relative; width :1800px ;margin-right: -150px;border-top: 4px solid white ;border-right: 4px solid white ;border-bottom: 4px solid white ;" >
+            <div  style="background-color: red; height:30px "></div>
+            <div id="enemyhealth" style="position:absolute ; background:#818cf8 ; top: 0 ; right: 0 ; bottom: 0 ; left: 0 ; " ></div>
+            </div>
+         <div></div>
+        </div>
+        <div  id="displayText"  style="position: absolute ; color :white ;display: none ; justify-content: center ; align-items: center; top: 0 ; right: 0 ; bottom: 0 ; left:500px ; " >Tie</div>
+        <canvas></canvas>
+    </div>
+
+    <!-- FOR LIGHT SWITCH -->
+
+  <form>
+    <label for="brightness">Brightness</label>
+    <input type="range" id="brightness" name="brightness" min="1" max="100" value="100">
+  </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js\utils.js"></script>
+    <script src="js\classes.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
